@@ -1,0 +1,24 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+  margin-bottom: 40px;
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -5%;;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+
+.no_display {display: none}
+
+.product_grid_item
+{
+    border: 1px solid #666;
+    text-align: center;
+}

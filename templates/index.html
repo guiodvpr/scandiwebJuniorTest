@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form method="post" action="./index.php">
+    
+    <div class="row">
+        <div class="col-1 ml-auto">
+            <li class="col-1 list-unstyled">
+                <a class="btn btn-success" href="./addProduct.php">ADD</a>
+            </li>
+        </div>
+        <div class="col-1 ">
+                <button type="submit" class="btn btn-danger">MASS DELETE</button>
+        </div>
+       
+    </div>
+    <hr/>
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-3  card">
+             <div class="card-header">
+                <input type="checkbox" class="delete-checkbox" name="delete_products[]" value="{{ product.id }}"/>
+                {{ product.SKU }} 
+            </div>
+            <div class="card-body container">
+              Title:  {{ product.title }} <br/>
+                Price: {{ product.price }} $<br/>
+                Type: {{ product.type }} <br/>
+                {{ product.type_value }} <br/>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</form>
+{% endblock %}
